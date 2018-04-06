@@ -1,0 +1,13 @@
+[Unit]
+Description=Emacs: the extensible, self-documenting text editor
+
+[Service]
+TimeoutSec=15min
+Type=forking
+ExecStartPre=/usr/bin/vmtouch -ft %h/.emacs.d
+ExecStart=/usr/bin/emacs --daemon
+ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
+Restart=always
+
+[Install]
+WantedBy=default.target
