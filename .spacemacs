@@ -376,6 +376,7 @@ you should place your code here."
            (smtpmail-local-domain "mellanox.com")
            (smtpmail-smtp-server "smtp.office365.com")
            ;; (smtpmail-stream-type startls)
+           (starttls-use-gnutls t)
            (smtpmail-starttls-credentials '(("smtp.office365.com" 587 nil nil)))
            (smtpmail-smtp-service 587)
            (smtpmail-debug-info t))))
