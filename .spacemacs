@@ -366,7 +366,7 @@ you should place your code here."
            (user-full-name "Vlad Buslov")
            ;; Receive
            (mu4e-get-mail-command "mbsync -c ~/.mbsyncrc mellanox")
-           (mu4e-sent-messages-behavior sent)
+           (mu4e-sent-messages-behavior delete)
            (mu4e-sent-folder "/mellanox/Sent Items")
            (mu4e-drafts-folder "/mellanox/Drafts")
            (mu4e-trash-folder "/mellanox/Deleted Items")
