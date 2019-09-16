@@ -530,8 +530,24 @@ before packages are loaded."
                     (smtpmail-smtp-service . 587)
                     ;; Other
                     (starttls-use-gnutls . t)
-                    (smtpmail-debug-info . t)))))
-  )
+                    (smtpmail-debug-info . t)))
+          ,(make-mu4e-context
+            :name "Personal"
+            :vars '((user-mail-address . "vlad@buslov.dev")
+                    (user-full-name . "Vlad Buslov")
+                    ;; Receive
+                    (mu4e-get-mail-command . "mbsync personal")
+                    (mu4e-sent-folder . "/personal/Sent")
+                    (mu4e-drafts-folder . "/personal/Drafts")
+                    (mu4e-trash-folder . "/personal/Trash")
+                    (mu4e-refile-folder . "/personal/Archive")
+                    ;; Send
+                    (smtpmail-smtp-server . "mail.buslov.dev")
+                    (smtpmail-starttls-credentials . '(("mail.buslov.dev" 587 nil nil)))
+                    (smtpmail-smtp-service . 587)
+                    ;; Other
+                    (starttls-use-gnutls . t)
+                    (smtpmail-debug-info . t))))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
