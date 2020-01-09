@@ -542,8 +542,9 @@ before packages are loaded."
                     (mu4e-refile-folder . "/personal/Archive")
                     ;; Send
                     (smtpmail-smtp-server . "mail.buslov.dev")
-                    (smtpmail-starttls-credentials . '(("mail.buslov.dev" 587 nil nil)))
-                    (smtpmail-smtp-service . 587)
+                    (smtpmail-stream-type . tls)
+                    (smtpmail-starttls-credentials . '(("mail.buslov.dev" 465 nil nil)))
+                    (smtpmail-smtp-service . 465)
                     ;; Other
                     (starttls-use-gnutls . t)
                     (smtpmail-debug-info . t))))))
